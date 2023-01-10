@@ -1,0 +1,11 @@
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    background: linear-gradient(178deg, rgba(0, 0, 0, 0.842) 50%, rgba(11, 76, 255, 0.842) 70%);
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+}
