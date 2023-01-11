@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" 
     integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
+    <title>Weather Dashboard</title>
 </head>
 <body>
     <div class="top-header text-white">
@@ -17,27 +17,32 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-3 colSearch">
-                <label>Enter a City:</label>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control textVal" placeholder="Atlanta">
-                    <div class="input-group-append btnPar">
-                        <button class="btn btn-primary search" type="button" id="btn-add2"><i class="fas fa-search"></i></button>
-                    </div>
+            <form class="col">
+                <div class="form-group">
+                    <label for="Search for a City:">Enter a City:</label>
+                    <input type="city" class="form-control"  placeholder="Atlanta">
                 </div>
-                <div class="container cityList"></div>
-            </div>
-            <div class="col-12 col-md-9 colFore">
-                <div class="row today">
-                    <div class="card bg-light mb-3 " style="max-width: 400px;">
-                        <h2 class="card-header cardTodayCityName"></h2>
-						<h3 class="card-header cardTodayDate"></h3>
-						<img class="icons"/>
-						<div class="card-body cardBodyToday"></div>
-                    </div>
+                <button class="btn btn-primary" id="btn1">Search</button>
+                <hr>
+                <p></p>
+                <div id="cityList"></div>
+            </form>
+            <div class="column">
+            <div class="city-card">
+                <label class="card-header" id="city-name"></label>
+                <div class="card-body">
+                    <ul id="city-info"></ul>
                 </div>
+                <section class="card-container">
+                    <h2 id="side-header">5-Day Forecast:</h2>
+                    <div class="forecast-card w-18rem" id="card-one"></div>
+                    <div class="forecast-card w-18rem" id="card-two"></div>
+                    <div class="forecast-card w-18rem" id="card-three"></div>
+                    <div class="forecast-card w-18rem" id="card-four"></div>
+                    <div class="forecast-card w-18rem" id="card-five"></div>                              
+                    </div>
+                </section>
             </div>
-            <div class="row fiveDay"></div>
         </div>
     </div>
 </body>
@@ -45,4 +50,5 @@
 integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="./assets/script.js"></script>
 </html>

@@ -1,5 +1,6 @@
 *{
     font-family: 'Roboto Condensed', sans-serif;
+    list-style: none;
 }
 
 h1 {
@@ -8,4 +9,70 @@ h1 {
     padding: 1rem;
     margin-bottom: 1rem;
     font-size: 4rem;
+}
+
+h2 {
+    color:black;
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 22px;
+    margin: 10px;
+}
+
+label {
+    font-size: 30px;
+    display: block;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+hr {
+    border-width: 4px;
+    color: rgb(11, 76, 255);
+}
+
+.city-card {
+    border-style: solid;
+    margin: 20px;
+}
+
+#city-info {
+    padding-left: 5px;
+}
+
+.card-container {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: rgba(11, 76, 255, 0.842);
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.card > li {
+    text-align: center;
+}
+
+#btn1 {
+    width: 100%;
+    background-color: rgba(11, 76, 255, 0.842);
+}
+
+#cityList > button {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(191, 191, 191);
 }
