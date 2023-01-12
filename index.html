@@ -12,36 +12,46 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <div class="top-header text-white">
-        <h1 class="weather-txt">Weather Dashboard</h1>
+    <!-- Header Text -->
+    <div class="row text-center text-white w-auto">
+        <div class="col-12 text-center p-0">
+            <h1>Weather Dashboard</h1>
+        </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <form class="col">
-                <div class="form-group">
-                    <label for="Search for a City:">Enter a City:</label>
-                    <input type="city" class="form-control"  placeholder="Atlanta">
+    <!-- Search section -->
+    <div class="row w-auto">
+        <div class="col-3 m-3">
+            <div class="row input-group">
+                <h3 id="searchResults">Enter a City:</h3>
+                <div class="input-group">
+                    <input id="city" type="text" class="form-control rounded" placeholder="City" aria-label="search">
                 </div>
-                <button class="btn btn-primary" id="btn1">Search</button>
-                <hr>
-                <p></p>
-                <div id="cityList"></div>
-            </form>
-            <div class="column">
-            <div class="city-card">
-                <label class="card-header" id="city-name"></label>
-                <div class="card-body">
-                    <ul id="city-info"></ul>
-                </div>
-                <section class="card-container">
-                    <h2 id="side-header">5-Day Forecast:</h2>
-                    <div class="forecast-card w-18rem" id="card-one"></div>
-                    <div class="forecast-card w-18rem" id="card-two"></div>
-                    <div class="forecast-card w-18rem" id="card-three"></div>
-                    <div class="forecast-card w-18rem" id="card-four"></div>
-                    <div class="forecast-card w-18rem" id="card-five"></div>                              
+                <div class="mb-5">
+                    <button id="fetch-button" class="btn btn-primary col-12 rounded mt-2">Search</button>
+                    <hr>
+                    <!-- append city history searches here-->
+                    <div id="historybox col-12">
+                        <ul id="history" ></ul>
                     </div>
-                </section>
+                </div>
+            </div>
+        </div>
+    <!-- Current Weather -->
+        <div class="col-sm-8 mt-3">
+            <div class="row ml-2 border border-dark rounded">
+                <div class="col-sm-12" id="current-weather">
+                    <h3 class="city-name mb-1 mt-2 bolder" id="current-city"><div id="current-date">Today's Date</div></h3>
+                    <div class="weather-icon"></div>                    
+                    <div id="tempEl">Temperature:</div>
+                    <div class="humidity">Humidity:</div> 
+                    <div id="windSpeed">Wind:</div>
+                </div>
+            </div>
+            <!-- 5 Day -->
+            <h5 class="ml-3 mt-2">5-Day Forecast:</h5>
+                <div id="container">
+                    <div class="card-deck m-2"></div>
+                </div>
             </div>
         </div>
     </div>
